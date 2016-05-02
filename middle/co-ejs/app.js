@@ -14,9 +14,15 @@ var locals = {
         yield wait(1000);
         return this.ip;
     },
+    getSum: function *(a, b) {
+        yield wait(1000);
+        return a + b;
+    },
     callback: function() {
         return function(cb) {
-            cb(null, '<p> callback </p>');
+            setTimeout(function (){
+                cb(null, '<p> callback </p>');
+            },2000);
         };
     },
     callbackGen: function () {
@@ -49,11 +55,9 @@ app.use(render(app, {
 app.use(function *(){
     console.time('time');
     yield this.render('content', {
-        users: [
-            {name: 'John'},
+        users: [{name: 'John'},
             {name: 'Jack'},
-            {name: 'Tom'}
-        ]
+            {name: 'Tom'}]
     });
     console.timeEnd('time');
 });
