@@ -4,10 +4,10 @@ var router = require('koa-router')();
 var app = koa();
 
 router.get('/', function *(next) {
-  console.log(this.request.query);
-  console.log(this.query);
+    console.log(this.request.query);
+    console.log(this.query);
 
-  this.body = 'hello';
+    this.body = 'hello';
 });
 
 app

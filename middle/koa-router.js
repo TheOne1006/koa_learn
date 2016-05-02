@@ -5,13 +5,13 @@ var app = koa();
 
 
 router.get('/', function* (next) {
-  console.log('home');
-  this.body = '<h1>HOME</h1>';
+    console.log('home');
+    this.body = '<h1>HOME</h1>';
 });
 
 router.get('/2', function* (next) {
-  console.log('/2');
-  this.body = '<h2>22</h2>';
+    console.log('/2');
+    this.body = '<h2>22</h2>';
 });
 
 app
