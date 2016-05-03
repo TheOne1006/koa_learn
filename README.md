@@ -18,5 +18,11 @@
 
 #### koa middle ####
 
-1. koa-router
-2.
+1. koa-router : koa 路由
+    - koa-froute : 路径即路由
+2. co-ejs: co 包装的 ejs 模板引擎
+3. koa-scheme: 字段验证
+4. koa-logger: 请求日志
+4. koa-static: 静态资源中间件
+5. koa-mount: 中间件挂在
+6. koa-compress: 响应格式压缩 (未完)
